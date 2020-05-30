@@ -26,3 +26,5 @@ source http://home.thep.lu.se/~torbjorn/pythia82html/Welcome.html
 source http://www.genie-mc.org/
 # nuance 
 source http://neutrino.phy.duke.edu/nuance-format/
+# hijing 
+source https://arxiv.org/abs/nucl-th/9502021
