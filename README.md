@@ -18,3 +18,5 @@ source http://root.cern.ch/git/geant3.git
 source https://geant4.web.cern.ch/
 # misc 
 source www.satyajitjena.in
+# pythia6 
+source http://home.thep.lu.se/~torbjorn/pythiaaux/past.html
