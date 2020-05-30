@@ -9,7 +9,6 @@
 #                                                             |
 #     Inspired by Dario Berzano's scripts                     |
 #     at dberzano/cern-alice-setup/                           |
-#     (Some functions are used as it is)                      |
 #                                                             |
 #-------------------------------------------------------------|
 export MNVPATH="${HOME}"
