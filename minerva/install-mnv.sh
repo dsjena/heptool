@@ -8,7 +8,7 @@
 #     3rd May 2020                                            |
 #                                                             |
 #     Inspired by Dario Berzano's scripts                     |
-#     at dberzano/cern-alice-setup/                           |
+#     at dberzano/cern-alice-setup/                           | 
 #                                                             |
 #-------------------------------------------------------------|
 export MNVPATH="${HOME}"
@@ -798,10 +798,12 @@ function InstallSPU() {
    # ALWAYS Create the source file
    echo "# Appending PlotUtils Variables Variables" >> ${ENVFILE} 
    echo "export SPUTILS=${minstall}">> ${ENVFILE}
+   echo "export PLOTUTILSROOT=${minstall}">> ${ENVFILE}
    echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:${minstall}/lib">> ${ENVFILE}
    echo "export DYLD_LIBRARY_PATH=\$DYLD_LIBRARY_PATH:${minstall}/lib">> ${ENVFILE}
    echo "export PATH=\$PATH:${minstall}/bin">> ${ENVFILE}
    export SPUTILS=${minstall}
+   export PLOTUTILSROOT=${minstall}
    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${minstall}/lib
    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:${minstall}/lib
    export PATH=$PATH:${minstall}/bin
@@ -865,10 +867,12 @@ function InstallDPU() {
    # ALWAYS Create the source file
    echo "# Appending PlotUtils Variables Variables" >> ${ENVFILE} 
    echo "export DPUTILS=${minstall}">> ${ENVFILE}
+   echo "export PLOTUTILSROOT=${minstall}">> ${ENVFILE}
    echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:\${DPUTILS}/lib">> ${ENVFILE}
    echo "export DYLD_LIBRARY_PATH=\$DYLD_LIBRARY_PATH:\${DPUTILS}/lib">> ${ENVFILE}
    echo "export PATH=\$PATH:${minstall}/bin">> ${ENVFILE}
    export DPUTILS=${minstall}
+   export PLOTUTILSROOT=${minstall}
    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:${minstall}/lib
    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:${minstall}/lib
    export PATH=$PATH:${minstall}/bin
@@ -951,13 +955,14 @@ function FurnishRequirement() {
 #a--------------------------------- A18
 function InitialWord() {
   echo -e "
-  Note that this is an automated script you can usethis script , and  Manual method 
-  of installation. This installer can be used to install ROOT, BOOST CMAKE all 
-  of them or one of them depending what are you setting during the installation process. 
-  If your instllation somehow crashes, please send me a mail with two files it prompted 
-  for you to send, so that I will be able to fix some issues. I am not currently adding 
-  any dependecnies to this instllation, you can always follow the dependencies (system 
-  level in the help page)
+  Note that this is an automated script you can usethis script , and  
+  Manual method of installation. This installer can be used to install 
+  ROOT, BOOST CMAKE all of them or one of them depending what are you 
+  setting during the installation process. If your instllation somehow 
+  crashes, please send me a mail with two files it prompted for you to 
+  send, so that I will be able to fix some issues. I am not currently 
+  adding any dependecnies to this instllation, you can always follow 
+  the dependencies (system level in the help page)
 "                            
 }
 #a--------------------------------- A18
@@ -976,12 +981,13 @@ echo -e '\033[36m'"
 #a--------------------------------- A18
 function ShowWarning() {
    echo ""
-   WrnA "---------------------*******    Warning  ********------------------------"
-   WrnA "SPUTils is currently in private GIT hub, so, you need to provide passward"
-   WrnA "During instllation process to download these packages and work it properly"
-   WrnA "thus please provide login and passwrd when github ask same to do....."
-   WrnA "one we make this public, then it is not needed anymore. To make you not to"
-   WrnA "wait for very long time, I set the downloading as first stage of the code."
+   WrnA "---------------******* Warning  ********  ----------------------"
+   WrnA "SPUTils is currently in private GIT hub, so, you need to provide"
+   WrnA "passward. During instllation process to download these packages"
+   WrnA "and work it properly thus please provide login and passwrd when "
+   WrnA "github ask same to do..... Once we make this public, then it is "
+   WrnA "not needed anymore. To make you not to wait for very long time, "
+   WrnA "I set the downloading as first stage of the code."
    AskA "Please enter any key once you finish reading it"
    read -t 30 -n 1 -s -r -p "It will proceed in 30 seconds.."
 
@@ -1137,12 +1143,14 @@ function Main() {
     #echo $cmake_required
     if [ ${cmake_version_check} -lt ${cmake_required} ]; 
     then
-      FatY 'Found cmake version ${cmake_version} which is older than the required version ${CMAKEVERSION_REQUIRED}'
-      SetT 'in PATH. Installer will Install newer Version as an external package'
+      FatY 'Found cmake version ${cmake_version} which is older than the'
+      FatY 'required version ${CMAKEVERSION_REQUIRED} in PATH.'
+      SetT 'Installer will Install newer Version as an external package'
       DO_CMAKE=1
     else 
-      MnvS "Found cmake version ${cmake_version} which is newer than the required version ${CMAKEVERSION_REQUIRED}"
-      MnvS " in PATH. This version is okay. Don't install cmake as external package."
+      MnvS "Found cmake version ${cmake_version} which is newer than the"
+      MnvS "required version ${CMAKEVERSION_REQUIRED} in PATH. This version"
+      MnvS "is okay. Don't install cmake as external package."
       DO_ROOT=0
       #AskA "Do you want to upgrade CMAKE in anycase?"
       #printf 'Enter [y/n] '
