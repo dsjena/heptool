@@ -6,3 +6,5 @@ Show your Love For HEP
 source https://github.com/cooperative-computing-lab/cctools
 # cgal 
 source https://www.cgal.org/
+# clhep 
+source https://gitlab.cern.ch/CLHEP/CLHEP
