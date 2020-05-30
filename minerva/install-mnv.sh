@@ -1125,7 +1125,7 @@ function Main() {
     SetT 'installation!!!'
     SetT 'At this stage you need to stop the installation' 
     AskA "Do you want to install CMAKE? (N to stop instllation)"
-    CalJ 'Enter [y/n]'
+    printf 'Enter [y/n]'
     read check
     case ${check:=y} in 
       [yY]*) 
