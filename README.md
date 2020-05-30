@@ -88,3 +88,7 @@ source https://pythran.readthedocs.io/en/latest/
 # docs 
 source Document
 
+
+# minerva 
+source  Script related to minerva 
+
