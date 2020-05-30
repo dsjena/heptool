@@ -82,3 +82,5 @@ source https://urqmd.org/
 source https://www.python.org/
 # pyroot 
 source https://root.cern.ch/pyroot
+# Pythran 
+source https://pythran.readthedocs.io/en/latest/
