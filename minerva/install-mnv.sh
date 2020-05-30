@@ -1236,9 +1236,10 @@ function Main() {
   MnvS "  (a) -> It will install only PlotUtils part, "
   MnvS "  (b) -> It will install everything (NSF and AnaUtils)"
   MnvS "  (c) -> GPVM Installation... Not Activated now"
+  MnvS "  (n) -> Don't install PlotUtils"
   MnvS "         see the readme for more detail about function"
   AskA "Which verion you would like to install?"
-  printf 'enter [a/b/c] '
+  printf 'enter [a/b/c/n] '
   read ans
   case ${ans:=a} in 
     [aA]*)  
@@ -1255,6 +1256,11 @@ function Main() {
       MnvS "----- **** under development **** -----"
       FatY " Sytem will exit"
       exit
+      ;;
+    [nN]*)
+      MnvS "It will nto install PlotUtils"
+      DO_MNV_ALL=0
+      DO_MNV_SPU=0
       ;;
     *) 
     exit;;
