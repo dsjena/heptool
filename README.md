@@ -10,3 +10,5 @@ source https://www.cgal.org/
 source https://gitlab.cern.ch/CLHEP/CLHEP
 # cmake 
 source https://github.com/Kitware/CMake
+# geant3 
+source http://root.cern.ch/git/geant3.git
