@@ -12,3 +12,5 @@ source https://gitlab.cern.ch/CLHEP/CLHEP
 source https://github.com/Kitware/CMake
 # geant3 
 source http://root.cern.ch/git/geant3.git
+# geant3 
+source http://root.cern.ch/git/geant3.git
