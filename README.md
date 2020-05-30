@@ -84,3 +84,7 @@ source https://www.python.org/
 source https://root.cern.ch/pyroot
 # Pythran 
 source https://pythran.readthedocs.io/en/latest/
+
+# docs 
+source Document
+
