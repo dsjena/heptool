@@ -24,8 +24,6 @@ We emphasize libraries that work well with the C++ Standard Library. Boost libra
 
 We aim to establish "existing practice" and provide reference implementations so that Boost libraries are suitable for eventual standardization. Beginning with the ten Boost Libraries included in the Library Technical Report (TR1) and continuing with every release of the ISO standard for C++ since 2011, the C++ Standards Committee has continued to rely on Boost as a valuable source for additions to the Standard C++ Library.
 
-
-
 # cctools 
 
 source https://github.com/cooperative-computing-lab/cctools
@@ -81,7 +79,21 @@ source https://urqmd.org/
 # python 
 source https://www.python.org/
 # pyroot 
+
 source https://root.cern.ch/pyroot
+
+PyROOT is a Python extension module that allows the user to interact with any ROOT class from the Python interpreter. This is done generically using the ROOT dictionary, therefore there is no need to generate any Python wrapper code to include new ROOT classes. At the same time PyROOT offers the possibility to execute and evaluate any Python command or start a Python shell from the ROOT/CLING prompt. Further details are available in the PyROOT section of the Users' Guide.
+Enabling PyROOT
+
+All the instructions relative to the flags to configure ROOT can be found here. In this particular case, PyROOT is enabled by default: just make sure you have the Python header files on your machine.
+More pythonistic PyROOT: rootpy
+
+The generality with which PyROOT creates bindings based on dictionaries makes that it is close to the original C++, which is great for e.g. sharing documentation. However, where it is possible to do so automatically, e.g. for handling of container classes, "pythonizations" are available. If that is not enough for your needs, then check out the rootpy project for a more pythonistic PyROOT.
+High performance PyROOT: cppyy
+
+A new approach is based on cppyy, a run-time bindings generator like PyROOT for the PyPy project. It has both a CINT and a pure-Reflex back-end and is, depending on use, 50x-100x faster than PyROOT. A pre-installed version based on the CINT backend is available on /afs as pypyroot.
+
+
 # Pythran 
 source https://pythran.readthedocs.io/en/latest/
 
@@ -91,4 +103,28 @@ source Document
 
 # minerva 
 source  Script related to minerva 
+
+
+# root
+
+source https://root.cern.ch/
+
+A modular scientific software toolkit. It provides all the functionalities needed to deal with big data processing, statistical analysis, visualisation and storage. It is mainly written in C++ but integrated with other languages such as Python and R.
+ 
+
+In the mid 1990’s, René Brun and Fons Rademakers had many years of experience developing interactive tools and simulation packages. They had lead successful projects such as PAW, PIAF, and GEANT, and they knew PAW the twenty-year-old FORTRAN libraries had reached their limits. Although still very popular, these tools could not scale up to the challenges offered by the Large Hadron Collider, where the data is a few orders of magnitude larger than anything seen before.
+
+At the same time, computer science had made leaps of progress especially in the area of Object Oriented Design, and René and Fons were ready to take advantage of it.
+
+ROOT was developed in the context of the NA49 experiment at CERN. NA49 has generated an impressive amount of data, around 10 Terabytes per run. This rate provided the ideal environment to develop and test the next generation data analysis.
+
+ROOT was, and still is, developed in the “Bazaar style”, a term from the book “The Cathedral and the Bazaar” by Eric S. Raymond. It means a liberal, informal development style that heavily relies on the diverse and deep talent of the user community. The result is that physicists developed ROOT for themselves; this made it specific, appropriate, useful, and over time refined and very powerful. The development of ROOT is a continuous conversation between users and developers with the line between the two blurring at times and the users becoming co-developers.
+
+When it comes to storing and mining large amount of data, physics plows the way with its Terabytes, but other fields and industry follow close behind as they acquiring more and more data over time. They are ready to use the true and tested technologies physics has invented. In this way, other fields and industries have found ROOT useful and they have started to use it also.
+
+In the bazaar view, software is released early and frequently to expose it to thousands of eager co-developers to pound on, report bugs, and contribute possible fixes. More users find more bugs, because they stress the program in different ways. By now, after ten years, the age of ROOT is quite mature. Most likely, you will find the features you are looking for, and if you have found a hole, you are encouraged to participate in the dialog and post your suggestion or even implementation on the ROOT forum.
+
+
+# cython 
+source https://cython.readthedocs.io/en/latest/
 
