@@ -702,7 +702,8 @@ function InstallRoot() {
   local mbuild="${MNVBUILD}/${module}/build"
   local minstall="${MNVBUILD}/${module}/install"
   #local mGitUrl='https://github.com/dsjena/boost'
-  local mGitUrl='https://github.com/dsjena/root.git'
+  #local mGitUrl='https://github.com/dsjena/root.git'
+  local mGitUrl='https://github.com/root-project/root.git'
   SetT " Working dir: ${MNVPATH} \n Root Base: ${mgit} \n ROOTSYS: ${minstall}"
   MnvS "Configuring ${module} directory"
   local DO_IT_NOW=0
