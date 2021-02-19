@@ -12,7 +12,7 @@
 #                                                             |
 #-------------------------------------------------------------|
 export MNVPATH="${HOME}"
-export MNVSOFT="mnv"
+export MNVSOFT="heptool"
 export NCORE="4"
 export MNVSRC="source"
 export MNVBUILD="build"
