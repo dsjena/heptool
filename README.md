@@ -44,17 +44,36 @@ people that have contributed to the software over the years.
 
 # cgal 
 source https://www.cgal.org/
+
+The Computational Geometry Algorithm Library (CGAL) is a software 
+library written in C++. It provides easy access to the efficient 
+geometric algorithm and has a wide application ranging from computer 
+graphics and robotics to medical imaging and geographic information system.
+
 # clhep 
 source https://gitlab.cern.ch/CLHEP/CLHEP
+
+A Class Library for High Energy Physics (CLHEP) is a C++ based library that provides
+a set of utility classes specific to HEP community such as random generators, physics 
+vectors, geometry and linear algebra. 
+
 # cmake 
 source https://github.com/Kitware/CMake
+
+CMake is a open-source tool to designed to build, test and package a software
+using a compiler-independent method 
 # geant3 
 source http://root.cern.ch/git/geant3.git
+
+GEANT is an acronym for GEometry ANd Tracking. It is a detector simulation software 
+primarily written in FORTRAN. It is designed to study the passage of particle through 
+matter using Monte Carlo methods. It include utilities to simulate detector geometry, 
+detector response, tracking of particles in the deetector material etc.
 # geant3 
 source http://root.cern.ch/git/geant3.git
 # geant4 
 source https://geant4.web.cern.ch/
-
+GEANT4 is a rewrite of GEANT3 into an object oriented programming language (C++)
 # misc 
 
 Some miscellenous collection of script
@@ -64,20 +83,38 @@ source www.satyajitjena.in
 
 # pythia6 
 source http://home.thep.lu.se/~torbjorn/pythiaaux/past.html
+PYTHIA6 is a FORTRAN-based event generator that is used to simulate multiparticle production in 
+high energy hadronic as well as heavy ion collision. It generate events in as much
+detail as experimentally observable ones, within the bounds of our current understanding
+of the underlying physics.
+
 # pythia8 
 source http://home.thep.lu.se/~torbjorn/pythia82html/Welcome.html
+PYTHIA8 is simply the C++ version of PYTHIA6 with some additional physics inputs.
 # genie-mc 
 source http://www.genie-mc.org/
+GENIE is a Monte Carlo event generator used primarily for neutrino events. Prediction from GENIE events
+are being used as reference point by almost all modern neutrino physics experiments.
 # nuance 
 source http://neutrino.phy.duke.edu/nuance-format/
+nuance is a software package developed to simulate the neutrino interactions. This 
+program can generates different final states for neutral current and charged current processes. 
 # hijing 
 source https://arxiv.org/abs/nucl-th/9502021
+Heavy-Ion Jet INteraction Generator (HIJING) is a Monte Carlo event generator based on QCD-inspired models
+for multiple jet production. It is primarily used to study jet and associated particle production in high energy collisions
+involving hadrons and/or heavy-ion. 
+
 # RooUnfold 
 source http://hepunx.rl.ac.uk/~adye/software/unfold/RooUnfold.html
+RooUnfold is a ROOT Unfolding framework used to remove known uncertainities
+arising from systematic biases, measurement resolution so as to study the "true" distribution.
 # urqmd 
 source https://urqmd.org/
+Ultra relativistic Quantum Molecular Dynamics (UrQMD) is an event generator to simulate pp, pA and AA collision. It is a microscopic transport theory based simulation used for studying a wide variety of heavy ion related effects ranging from multifragmentation and collective flow to particle production and correlations. 
 # python 
 source https://www.python.org/
+Python is an interpreted, object oriented, high-level programming language. 
 # pyroot 
 
 source https://root.cern.ch/pyroot
